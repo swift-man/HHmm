@@ -23,12 +23,16 @@ public struct HHmm: Equatable {
   
   public init(text: String) {
     self.value = text
+    
     let date = dateFormatter.date(from: text)
     self.hour = date?.hour
     self.minute = date?.minute
   }
   
   public init(hour: Int, minute: Int) {
+    self.hour = hour
+    self.minute = minute
+    
     var date = Date()
     date.hour = hour
     date.minute = minute
