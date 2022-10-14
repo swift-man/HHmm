@@ -16,7 +16,7 @@ print(hhmm.value) // "20:20"
 
 ```swift
 let hhmm = HHmm(text: "08:15")
-print(hhmm.hour) // 08
+print(hhmm.hour) // 8
 print(hhmm.minute) // 15
 print(hhmm.value) // "08:15"
 ```
