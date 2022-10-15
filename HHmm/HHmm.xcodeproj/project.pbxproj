@@ -13,7 +13,7 @@
 		E5123B4628F9BBEF00AD359D /* HHmm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5123B4528F9BBEF00AD359D /* HHmm.swift */; };
 		E5123B4828F9BC0C00AD359D /* HHmmInitializeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5123B4728F9BC0C00AD359D /* HHmmInitializeTests.swift */; };
 		E53C238328FB0B0200F6DD56 /* HHmmFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53C238228FB0B0200F6DD56 /* HHmmFormatter.swift */; };
-		E54E683428FAF93000F86A3C /* HHmmSetterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E683328FAF93000F86A3C /* HHmmSetterTests.swift */; };
+		E53C238528FB0CDA00F6DD56 /* HHmmSetterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53C238428FB0CDA00F6DD56 /* HHmmSetterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,7 @@
 		E5123B4728F9BC0C00AD359D /* HHmmInitializeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HHmmInitializeTests.swift; path = ../../Tests/HHmmTests/HHmmInitializeTests.swift; sourceTree = "<group>"; };
 		E5123B4A28F9BC7400AD359D /* HHmmTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HHmmTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		E53C238228FB0B0200F6DD56 /* HHmmFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HHmmFormatter.swift; path = ../../Sources/HHmm/HHmmFormatter.swift; sourceTree = "<group>"; };
-		E54E683328FAF93000F86A3C /* HHmmSetterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HHmmSetterTests.swift; sourceTree = "<group>"; };
+		E53C238428FB0CDA00F6DD56 /* HHmmSetterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HHmmSetterTests.swift; path = ../../Tests/HHmmTests/HHmmSetterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				E5123B4728F9BC0C00AD359D /* HHmmInitializeTests.swift */,
-				E54E683328FAF93000F86A3C /* HHmmSetterTests.swift */,
+				E53C238428FB0CDA00F6DD56 /* HHmmSetterTests.swift */,
 				E5123B4A28F9BC7400AD359D /* HHmmTests-Bridging-Header.h */,
 			);
 			path = HHmmTests;
@@ -216,7 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E54E683428FAF93000F86A3C /* HHmmSetterTests.swift in Sources */,
+				E53C238528FB0CDA00F6DD56 /* HHmmSetterTests.swift in Sources */,
 				E5123B4828F9BC0C00AD359D /* HHmmInitializeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
