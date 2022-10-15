@@ -9,12 +9,59 @@ public struct HHmm: Equatable {
     return HHmm(date: Date())
   }
   
-  public let value: String
-  public var hour: Int?
-  public var minute: Int?
+  public var value: String {
+    didSet {
+      let formatter = HHmmFormatter()
+      if formatter.date(from: value) == nil {
+        self = HHmm.empty()
+      }
+    }
+  }
+  
+  public var hour: Int? {
+    get {
+      let date = HHmmFormatter().date(from: value)
+      return date?.hour
+    }
+    set {
+      guard let newValue else {
+        value = ""
+        return
+      }
+      var date = Date()
+      date.hour = newValue
+      date.minute = minute ?? 0
+      
+      let formatter = HHmmFormatter()
+      let string = formatter.string(from: date)
+      
+      value = string
+    }
+  }
+  
+  public var minute: Int? {
+    get {
+      let date = HHmmFormatter().date(from: value)
+      return date?.minute
+    }
+    set {
+      guard let newValue else {
+        value = ""
+        return
+      }
+      var date = Date()
+      date.hour = hour ?? 0
+      date.minute = newValue
+      
+      let formatter = HHmmFormatter()
+      let string = formatter.string(from: date)
+      
+      value = string
+    }
+  }
   
   public var date: Date? {
-    return dateFormatter.date(from: value)
+    return HHmmFormatter().date(from: value)
   }
   
   public var isEmpty: Bool {
@@ -22,52 +69,39 @@ public struct HHmm: Equatable {
   }
   
   public init(text: String) {
-    self.value = text
+    guard !text.isEmpty else {
+      self.value = ""
+      return
+    }
+    let formatter = HHmmFormatter()
+    guard let date = formatter.date(from: text) else {
+      self.value = ""
+      return
+    }
     
-    let date = dateFormatter.date(from: text)
-    self.hour = date?.hour
-    self.minute = date?.minute
+    self.value = formatter.string(from: date)
   }
   
   public init(hour: Int, minute: Int) {
-    self.hour = hour
-    self.minute = minute
-    
     var date = Date()
     date.hour = hour
     date.minute = minute
-    self.value = dateFormatter.string(from: date)
+    
+    let formatter = HHmmFormatter()
+    let string = formatter.string(from: date)
+    
+    value = string
   }
   
   public init(date: Date) {
-    self.value = dateFormatter.string(from: date)
+    self.value = HHmmFormatter().string(from: date)
     self.hour = date.hour
     self.minute = date.minute
   }
   
   public var systemStyleString: String? {
-    guard
-      let systemFormat = DateFormatter.dateFormat(fromTemplate: "j",
-                                                  options: 0,
-                                                  locale: .current),
-      let date = dateFormatter.date(from: value)
-    else { return nil }
-    
-    let dateFormatter = DateFormatter()
-    if systemFormat.hasPrefix("a") {
-      dateFormatter.dateFormat = "a h:mm"
-    } else {
-      dateFormatter.dateFormat = "HH:mm"
-    }
-    
-    return dateFormatter.string(from: date)
+    return HHmmFormatter().systemStyleString(from: value)
   }
-  
-  private var dateFormatter: DateFormatter = {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "HH:mm"
-    return dateFormatter
-  }()
 }
 
 extension Optional where Wrapped == HHmm {

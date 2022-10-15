@@ -11,7 +11,9 @@
 		E5123B3328F9BBBF00AD359D /* HHmm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5123B2828F9BBBF00AD359D /* HHmm.framework */; };
 		E5123B3928F9BBBF00AD359D /* HHmm.h in Headers */ = {isa = PBXBuildFile; fileRef = E5123B2B28F9BBBF00AD359D /* HHmm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5123B4628F9BBEF00AD359D /* HHmm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5123B4528F9BBEF00AD359D /* HHmm.swift */; };
-		E5123B4828F9BC0C00AD359D /* HHmmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5123B4728F9BC0C00AD359D /* HHmmTests.swift */; };
+		E5123B4828F9BC0C00AD359D /* HHmmInitializeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5123B4728F9BC0C00AD359D /* HHmmInitializeTests.swift */; };
+		E53C238328FB0B0200F6DD56 /* HHmmFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53C238228FB0B0200F6DD56 /* HHmmFormatter.swift */; };
+		E54E683428FAF93000F86A3C /* HHmmSetterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54E683328FAF93000F86A3C /* HHmmSetterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,8 +32,10 @@
 		E5123B2C28F9BBBF00AD359D /* HHmm.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = HHmm.docc; sourceTree = "<group>"; };
 		E5123B3228F9BBBF00AD359D /* HHmmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHmmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5123B4528F9BBEF00AD359D /* HHmm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HHmm.swift; path = ../../Sources/HHmm/HHmm.swift; sourceTree = "<group>"; };
-		E5123B4728F9BC0C00AD359D /* HHmmTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HHmmTests.swift; path = ../../Tests/HHmmTests/HHmmTests.swift; sourceTree = "<group>"; };
+		E5123B4728F9BC0C00AD359D /* HHmmInitializeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HHmmInitializeTests.swift; path = ../../Tests/HHmmTests/HHmmInitializeTests.swift; sourceTree = "<group>"; };
 		E5123B4A28F9BC7400AD359D /* HHmmTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HHmmTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		E53C238228FB0B0200F6DD56 /* HHmmFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HHmmFormatter.swift; path = ../../Sources/HHmm/HHmmFormatter.swift; sourceTree = "<group>"; };
+		E54E683328FAF93000F86A3C /* HHmmSetterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HHmmSetterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 			children = (
 				E5123B2B28F9BBBF00AD359D /* HHmm.h */,
 				E5123B4528F9BBEF00AD359D /* HHmm.swift */,
+				E53C238228FB0B0200F6DD56 /* HHmmFormatter.swift */,
 				E5123B2C28F9BBBF00AD359D /* HHmm.docc */,
 			);
 			path = HHmm;
@@ -84,7 +89,8 @@
 		E5123B3628F9BBBF00AD359D /* HHmmTests */ = {
 			isa = PBXGroup;
 			children = (
-				E5123B4728F9BC0C00AD359D /* HHmmTests.swift */,
+				E5123B4728F9BC0C00AD359D /* HHmmInitializeTests.swift */,
+				E54E683328FAF93000F86A3C /* HHmmSetterTests.swift */,
 				E5123B4A28F9BC7400AD359D /* HHmmTests-Bridging-Header.h */,
 			);
 			path = HHmmTests;
@@ -200,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E53C238328FB0B0200F6DD56 /* HHmmFormatter.swift in Sources */,
 				E5123B2D28F9BBBF00AD359D /* HHmm.docc in Sources */,
 				E5123B4628F9BBEF00AD359D /* HHmm.swift in Sources */,
 			);
@@ -209,7 +216,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5123B4828F9BC0C00AD359D /* HHmmTests.swift in Sources */,
+				E54E683428FAF93000F86A3C /* HHmmSetterTests.swift in Sources */,
+				E5123B4828F9BC0C00AD359D /* HHmmInitializeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
